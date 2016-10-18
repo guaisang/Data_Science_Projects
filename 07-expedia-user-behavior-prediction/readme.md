@@ -11,40 +11,52 @@ This project is from the Kaggle competition: https://www.kaggle.com/c/expedia-ho
 #### EC2
 First, create an AWS account if you haven't: [here](https://aws.amazon.com/)
 Log in, and select EC2 service:
+
 ![](./assets/prestep1.png)
 
 Launch instance here:
+
 ![](./assets/prestep2.png)
 
 Next, follow the AWS instruction step by step. Step 1 is to choose the type (operating system) of your instance. Here we go for Ubuntu:
+
 ![](./assets/step1.png)
 
 Step 2, choose the hardware configuration of your instance. Here we go for the free one:
+
 ![](./assets/step2.png)
 
 Step 3, configure details. Leave as it is:
+
 ![](./assets/step3.png)
 
 Step 4, add storage. Add storage depending on your dataset. Here we leave as default:
+
 ![](./assets/step4.png)
 
 Step 5, Tag instance. Leave as defaut:
+
 ![](./assets/step5.png)
 
 Step 6, configure security group. This is important, as you cannot change it once you launch your instance. Choose 'Create a new security group' and add following rules:
 SSH(22): 0.0.0.0/0, HTTPS(443): 0.0.0.0/0, and 8888: 0.0.0.0/0.
+
 ![](./assets/step6.png)
 
 The last step, create a key pair to launch your instance. Select 'Creat a key pair', type in your key pair name as you like, and download it:
+
 ![](./assets/step7.png)
 
 Now you have set up your instance. Let's go ahead and start it:
+
 ![](./assets/poststep1.png)
 
 Click 'Connect' and copy this line of commend:
+
 ![](./assets/poststep2.png)
 
 In your terminal, navigate to wherever you store your key pair, and paste the code you just copied. If your terminal looks like this, you are connected:
+
 ![](./assets/connected.png)
 
 ---
@@ -59,10 +71,13 @@ Reload your .bashrc by typing: source .bashrc
 #### Configure Jupyter Notebook
 Type: $ ipython profile create nbserver
 Then: $ ipython. Now you should be within ipython. First we are going to create a password for logging Jupyter:
+
 ![](./assets/password.png)
+
 Save the output password starting from 'sha1'
 
 Now we are going to create a self-signed SSL certificate for HTTPS access:
+
 ![](./assets/mycert.png)
 
 Note we first create a directory, and within the directory we create a pem file by typing: !openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem
@@ -84,6 +99,7 @@ c.NotebookApp.port = 8888
 Now it's time to launch Jupyter notebook.
 Type: jupyter notebook
 Then open your browser, copy your instance's public DNS from your aws EC2 website and go to https://your-Instance-public-DNS:8888.
+
 ![](./assets/publicdns.png)
 
 There will be a warning, that's fine. Advance and type in the password you set up in ipython. Boom! You are all set!
@@ -96,9 +112,11 @@ Transferring files between S3 and your local machine is relatively simple and st
 The tricky part is how to transfer files between EC2 and S3 once you have your files in your S3 bucket. We are going to do it by using a package called s3cmd.
 First, install the package by typing in: $ sudo apt-get install s3cmd
 Next, we need to configure s3cmd environment before we can use it. In order to do so, we would need the Access Key and Secret Key of our S3 account, which can be downloaded from the Security Credential page:
+
 ![](./assets/security_cred.png)
 
 Once you have it, in your terminal type: s3cmd --configure. Put in your Access Key and Secret Key, and then do the following:
+
 ![](./assets/s3cmd_config.png)
 
 Now you are able to use s3cmd.
@@ -114,6 +132,7 @@ This will send an alive message to the server every 120 seconds to keep you conn
 ---
 
 ### Expedia User Behavior Prediction
+
 ![](./assets/booking.png)
 
 The goal of this project is to predict Expedia user behavior based on the information of previous user activities and characteristics. Specifically, I was predicting which types of hotels users are going to book using information about what users searched for, how they interacted with search results (click/book), whether or not the search result was a travel package, etc. The data is from Expedia, with over 37 million rows and 24 columns.
