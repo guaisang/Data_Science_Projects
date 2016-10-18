@@ -84,20 +84,29 @@ Note we first create a directory, and within the directory we create a pem file 
 
 The last step is to modify the jupyter notebook config file:
 Type in following:
+
 $ cd ~/.jupyter
+
 $ jupyter notebook --generate-config
+
 $ vim jupyter_notebook_config.py
 
 Within the config file, we need to modify the following lines and uncomment them:
+
 c.NotebookApp.certfile = u'/home/ubuntu/certificates/mycert.pem'
+
 c.NotebookApp.ip = '* '
+
 c.NotebookApp.open_browser = False
+
 c.NotebookApp.password = u'sha1:...(the password you just saved in ipython)'
+
 c.NotebookApp.port = 8888
 
 #### Launch Jupyter
 Now it's time to launch Jupyter notebook.
 Type: jupyter notebook
+
 Then open your browser, copy your instance's public DNS from your aws EC2 website and go to https://your-Instance-public-DNS:8888.
 
 ![](./assets/publicdns.png)
@@ -120,13 +129,19 @@ Once you have it, in your terminal type: s3cmd --configure. Put in your Access K
 ![](./assets/s3cmd_config.png)
 
 Now you are able to use s3cmd.
+
 To check your bucket: s3cmd ls
+
 To upload files from EC2 to S3: s3cmd put filename s3://bucketname/
+
 To download files from S3 to EC2: s3cmd get s3://bucketname/filename
 
 Ok, now you have your python and data ready, you can start to do your data science on AWS! Oh one last thing, if you keep losing connection to AWS when you are running your code that takes a bit long time, try to add the following into ~/.ssh/config file on your local machine:
+
 Host *
+
 ServerAliveInterval 120
+
 This will send an alive message to the server every 120 seconds to keep you connected.
 
 ---
