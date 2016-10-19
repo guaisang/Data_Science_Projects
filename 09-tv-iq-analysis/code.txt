@@ -1,0 +1,61 @@
+﻿proc means data=tv;
+var c0000100 cpiatrr chobby ctvwk ctvend cdistv cshwrit racenw boy AFQT81 mbthage cbooksh creadh cpfml cfamh cmsmh cdouth ceath cstchch csheadh cstchsh csafeh cspareh csparph csmorah csordeh cstchcm csheadm cstchsm csafem csparem csparpm csmoram csordem ckreadh;
+run;
+
+data tv;
+set tv;
+if ctvwk>12 then delete;
+if ctvend>12 then delete;
+if cshwrit>56 then delete;
+if cshwrity>56 then delete;
+run;
+
+proc means data=tv;
+var c0000100 cpiatrr chobby ctvwk ctvend cdistv cshwrit racenw boy AFQT81 mbthage cbooksh creadh cpfml cfamh cmsmh cdouth ceath cstchch csheadh cstchsh csafeh cspareh csparph csmorah csordeh cstchcm csheadm cstchsm csafem csparem csparpm csmoram csordem ckreadh;
+run;
+
+Proc reg data=tv;
+model cshwrit=cshwrity chobby ctvwk ctvend cdistv racenw boy AFQT81 mbthage cbooksh creadh cpfml cfamh cmsmh cdouth ceath cstchch csheadh cstchsh csafeh cspareh csparph csmorah csordeh cstchcm csheadm cstchsm csafem csparem csparpm csmoram csordem ckreadh;
+output out=tvendo r=reswrit;
+run;
+proc reg data=tvendo;
+model cpiatrr=reswrit chobby ctvwk ctvend cdistv cshwrit racenw boy AFQT81 mbthage cbooksh creadh cpfml cfamh cmsmh cdouth ceath cstchch csheadh cstchsh csafeh cspareh csparph csmorah csordeh cstchcm csheadm cstchsm csafem csparem csparpm csmoram csordem ckreadh;
+run;
+
+proc reg data=tv;
+model cpiatrr=chobby ctvwk ctvend cdistv cshwrit racenw boy AFQT81 mbthage cbooksh creadh cpfml cfamh cmsmh cdouth ceath cstchch csheadh cstchsh csafeh cspareh csparph csmorah csordeh cstchcm csheadm cstchsm csafem csparem csparpm csmoram csordem ckreadh /acov;
+output out=resdat residual=uhat predicted=yhat;
+run;
+
+data resdat;
+set resdat;
+uhat2=uhat**2;
+run;
+proc reg data=resdat;
+model uhat2=chobby ctvwk ctvend cdistv cshwrit racenw boy AFQT81 mbthage cbooksh creadh cpfml cfamh cmsmh cdouth ceath cstchch csheadh cstchsh csafeh cspareh csparph csmorah csordeh cstchcm csheadm cstchsm csafem csparem csparpm csmoram csordem ckreadh;
+run;
+
+proc gplot data=resdat;
+plot uhat*ctvwk;
+plot uhat*ctvend;
+plot uhat*cshwrit;
+plot uhat*AFQT81;
+run;
+
+data resdat;
+set resdat;
+lres2=log(uhat2);
+run;
+proc reg data=resdat;
+model lres2=cshwrit ctvwk ctvend AFQT81 csparph csmorah;
+output out=resvar predicted=lhhat;
+run;
+data resvar;
+set resvar;
+hhat=exp(lhhat);
+oneoverh=1/hhat;
+run;
+proc reg data=resvar;
+model cpiatrr= chobby ctvwk ctvend cdistv cshwrit racenw boy AFQT81 mbthage cbooksh creadh cpfml cfamh cmsmh cdouth ceath cstchch csheadh cstchsh csafeh cspareh csparph csmorah csordeh cstchcm csheadm cstchsm csafem csparem csparpm csmoram csordem ckreadh;
+weight oneoverh;
+run;
