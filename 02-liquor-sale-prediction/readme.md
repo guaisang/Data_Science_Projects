@@ -34,6 +34,7 @@ The main challenges of this project are:
 * Handling outliers
 * Handling categorical features
 * Linear model implementation
+
 ---
 
 ###  Methodology
