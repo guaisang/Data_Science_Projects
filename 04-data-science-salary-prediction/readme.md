@@ -1,6 +1,6 @@
 # Data Science Salary Investigation
 
-![](./assets/wordcloud.png)
+![](./wordcloud.png)
 word cloud from job summary
 
 ### Overview

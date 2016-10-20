@@ -1,5 +1,6 @@
 # West Nile Virus Spread Prediction
 ![demo](spread.gif)
+made with Tableau
 
 This project is based on the Kaggle competition: https://www.kaggle.com/c/predict-west-nile-virus.
 
