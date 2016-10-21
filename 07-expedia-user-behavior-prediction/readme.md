@@ -150,8 +150,45 @@ This will send an alive message to the server every 120 seconds to keep you conn
 
 ![](./assets/booking.png)
 
+#### Overview
+
 The goal of this project is to predict Expedia user behavior based on the information of previous user activities and characteristics. Specifically, I was predicting which types of hotels (100 classes) users are going to book using information about what users searched for, how they interacted with search results (click/book), whether or not the search result was a travel package, etc. The data is from Expedia, with over 37 million rows and 24 columns.
 
-Features included in the dataset are: date_time, site_name, posa_continent (ID of continent associated with site_name), user_location_country, user_location_region, user_location_city, orig_destination_distance, user_id, is_mobile (1 when a user connected from a mobile device, 0 otherwise), is_package (1 if the click/booking was generated as a part of a package (i.e. combined with a flight), 0 otherwise), channel (ID of a marketing channel), srch_ci (Checkin date), srch_co, srch_adults_cnt, srch_children_cnt, srch_rm_cnt, srch_destination_id, srch_destination_type_id, hotel_continent, hotel_country, hotel_market, is_booking, cnt (Numer of similar events in the context of the same user session), hotel_cluster (dependent variable).
+Features included in the dataset are:
+* date_time,
+* site_name,
+* posa_continent (ID of continent associated with site_name),
+* user_location_country,
+* user_location_region,
+* user_location_city,
+* orig_destination_distance,
+* user_id,
+* is_mobile (1 when a user connected from a mobile device, 0 otherwise)
+* is_package (1 if the click/booking was generated as a part of a package (i.e. combined with a flight), 0 otherwise)
+* channel (ID of a marketing channel)
+* srch_ci (Checkin date)
+* srch_co
+* srch_adults_cnt
+* srch_children_cnt
+* srch_rm_cnt
+* srch_destination_id
+* srch_destination_type_id
+* hotel_continent
+* hotel_country
+* hotel_market
+* is_booking
+* cnt (Numer of similar events in the context of the same user session),
+* hotel_cluster (dependent variable)
 
-In this project, I used AWS EC2 and S3 services to handle big dataset, conduct missing value imputation, data visualization, feature selection, model selection and model optimization. Random Forest Regressor / Classifier, Boosting, and Neural Network were built and manually tuned to solve this problem.
+#### Challenges
+
+The main challenges of this project are:
+
+* Big data (4gb wiht over 37 million rows and 24 columns)
+* Mulitclasses (100 classes)
+* Handling missing values
+* Model tuning
+
+#### Methodology
+
+The main issue for big data problem is always how to balance model optimization and efficiency. In this project, I used AWS EC2 and S3 services to handle big dataset, took a sample from the whole dataset to conduct missing value imputation, data visualization, feature selection, model selection and model optimization. Random Forest Regressor / Classifier, Boosting, and Neural Network were built and manually tuned to solve this problem. Roc curve was plotted to evaluate model performance.

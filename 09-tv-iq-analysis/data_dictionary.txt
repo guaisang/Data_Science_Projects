@@ -1,0 +1,211 @@
+﻿The list of variables is given below. The data are extracted from 
+the publicly available NLSY79 Child data over 1986-1998 for children 
+surveyed at least three times at ages 4-5, 6-7, and 8-9. There are 4726
+ observations.
+
+All data are in the file project.xls, which is an Excel file that is zipped 
+in the file archive.zip. 
+
+List of Variables (in the order they appear in the file)
+
+Variable Name 		Variable Description
+
+
+C0000100        Child ID
+
+C0000200        Mother ID
+
+bthord          BIRTH ORDER OF CHILD
+
+cpiatm          PIAT (Peabody Individual Achievement Test) Math at age 8-9
+
+cpiatrr         PIAT Reading at age 8-9
+
+chobby          family encourages hobbies
+
+ctvwk           hours watching per weekday at ages 8-9
+
+ctvend          hours watching per weekend day at ages 8-9
+
+cdistv          parents discuss TV programs with child
+
+cshmath         hours/week a child spends on math homework
+
+cshwrit         hours/week a child spends on writing homework
+
+cpiatmy         PIAT Math at age 6-7
+
+cpiatrry        PIAT reading at ages 6-7
+
+chobbyy         family encourages hobbies
+
+ctvwky          hours watching per weekday at ages 6-7
+
+ctvendy         hours watching per weekend day at ages 6-7
+
+cdistvy         parents discuss TV programs with child
+
+cshmathy        hours/week a child spends on math homework
+
+cshwrity        hours/week a child spends on writing homework
+
+bpiatm          PIAT Math at age 4-5
+
+bpiatrr         PIAT Reading at age 4-5
+
+btvon           # of hours TV is on per day
+
+btvweek         # of hours/weekday child sees TV
+
+btvend          # of hours/weekend day child sees TV
+
+cbooksyh        child has 10 or more children books at home
+
+creadyh         how often mom reads to child: at least 3 times a week
+
+cfamyh          how often family get with relatives/friends: at least 2-3 times/month
+
+cmsmyh          how often child taken to museum: at least several times a year
+
+cpfmyh          how often child taken to performance: at least several times a year
+
+cdoutyh         how often child with dad outdoors: at least once a week
+
+ceatyh          how often child eats with mom & dad: at least once a day
+
+bbooksh         how many books does child have: 10 or more books
+
+breadh          how often mother read to child: at least 3 times a week
+
+bmagzh          how many magazines does family get: 3 or more
+
+bouth           how often child taken on outing: at least several times a week
+
+beatallh        how often child eats with mom & dad: at least once a day
+
+bmuseumh        how often child taken to museum: at least several times a year
+
+ckreadyh        how often child reads for enjoyment: everyday
+
+racenw          race of child: Black or Hispanic
+
+boy             sex of child: boy
+
+hgrademom88     mother°Øs highest grade at 1988
+
+AFQT81          mother°Øs AFQT score taken in 1981
+
+famsalary88     Family salary income in 1988
+
+married88y      mother was married in 1988
+
+mbthage         mother°Øs age at child 
+birth
+breastfeed      CHILD IS BREASTFED
+
+home5           home observation measurement of the environment variable (HOME)
+
+cbooksh         child has 10 or more children books at home
+
+creadh          how often mom reads to child: at least 3 times a week
+
+cpfml           how often child taken to performance: less than several times a year
+
+cfamh           how often family get with relatives/friends: at least 2-3 times/month
+
+cmsmh           how often child taken to museum: at least several times a year
+
+cdouth          how often child with dad outdoors: at least once a week
+
+ceath           how often child eats with mom & dad: at least once a day
+
+cstchch         mother's rating of teacher caring - high
+
+csheadh         mother's rating of principal as leader - high
+
+cstchsh         mother's rating of teacher skill - high
+
+csafeh          mother's rating of safety of school - high
+
+cspareh         mother's rating of school communicating with parents - high
+
+csparph         mother's rating of parents participating with school - high
+
+csmorah         mother's rating of school teaching right and wrong - high
+
+csordeh         mother's rating of school maintaining order - high
+
+cstchcm         mother's rating of teacher caring - middle
+
+csheadm         mother's rating of principal as leader - middle
+
+cstchsm         mother's rating of teacher skill - middle
+
+csafem          mother's rating of safety of school - middle
+
+csparem         mother's rating of school communicating with parents - middle
+
+csparpm         mother's rating of parents participating with school - middle
+
+csmoram         mother's rating of school teaching right and wrong - middle
+
+csordem         mother's rating of school maintaining order - middle
+
+cstchcyh        mother's rating of teacher caring - high
+
+csheadyh        mother's rating of principal as leader - high
+
+cstchsyh        mother's rating of teacher skill - high
+
+csafeyh         mother's rating of safety of school - high
+
+cspareyh        mother's rating of school communicating with parents - high
+
+csparpyh        mother's rating of parents participating with school - high
+
+csmorayh        mother's rating of school teaching right and wrong - high 
+csordeyh        mother's rating of school maintaining order - high
+
+cstchcym        mother's rating of teacher caring - middle
+
+csheadym        mother's rating of principal as leader - middle
+
+cstchsym        mother's rating of teacher skill - middle
+
+csafeym         mother's rating of safety of school - middle
+
+cspareym        mother's rating of school communicating with parents - middle
+
+csparpym        mother's rating of parents participating with school - middle
+
+csmoraym        mother's rating of school teaching right and wrong - middle
+
+csordeym        mother's rating of school maintaining order - middle
+
+cstypepub       the school is public
+
+cstypeypub      the school is public
+
+ckreadh         how often child reads for enjoyment: everyday
+
+ctvdayy7        # of hours/day child sees TV
+
+ctvdayy72       = ctvdayy7^2
+
+ctvday7         # of hours/day child sees TV
+
+ctvday72        ctvday7^2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
