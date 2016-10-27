@@ -1,6 +1,9 @@
 
 # Exploratory Analysis Project: SAT Scores + Summary Statistics
 
+---
+![](./verbal_map.png)
+
 ### Overview
 
 This project is about exploring the SAT scores data of year 2001 with basic data cleaning, visualization and statistics. In this project, I utilized Numpy, MatPlotLib, Seaborn and Tableau to conduct EDA.

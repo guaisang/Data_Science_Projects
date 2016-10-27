@@ -1,0 +1,5 @@
+,Data Type,Description,Mean
+Math,int64,Average Math Scores,531.843137255
+Rate,int64,Participant Rate,37.0
+State,object,States,
+Verbal,int64,Average Verbal Scores,532.529411765

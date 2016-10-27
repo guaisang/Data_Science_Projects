@@ -1,4 +1,4 @@
-# Credit Card default Prediction
+# Credit Card Default Prediction
 
 ---
 
