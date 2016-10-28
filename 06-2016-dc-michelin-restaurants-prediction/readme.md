@@ -61,3 +61,22 @@ Four models were built: Random Forest, Gradient Boosting, SVM and Neural Network
 The final prediction was determined by a majority vote: only restaurants that are predicted by at least 3 models are included. The number of star was equal to the highest number predicted by any model.
 
 See ‘models.ipynb’ for details.
+
+### Prediction / Results
+
+10 restaurants are predicted and 5 of them are in the actual Michelin list.
+
+Predicted Resaurants | Predicted Star | Michelin Restaurants | Michelin Star
+ --- | --- | --- | ---
+Komi | 1 | The Inn at Little Washington | 2
+Plume | 1 | Minibar | 2
+The Inn at Little Washington | 1 | Pineapple & Pearls | 2
+Masseria | 1 | Blue Duck Tavern | 1
+Marcel's | 1 | The Dabney | 1
+Minibar | 1 | Fiola | 1
+Obelisk | 1 | Kinship | 1
+Pineapple & Pearls | 1 | Masseria | 1
+Metier | 1 | Plume | 1
+Kinship | 1 | Rose's Luxury | 1
+ | | Sushi Taro | 1
+ | | Tail Up Goat | 1
