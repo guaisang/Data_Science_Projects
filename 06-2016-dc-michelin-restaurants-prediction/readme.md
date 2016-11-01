@@ -64,7 +64,7 @@ See ‘models.ipynb’ for details.
 
 ### Prediction / Results
 
-10 restaurants are predicted and 5 of them are in the actual Michelin list.
+10 restaurants are predicted and 6 of them are on the actual Michelin list.
 
 Predicted Resaurants | Predicted Star | Michelin Restaurants | Michelin Star
  --- | --- | --- | ---
