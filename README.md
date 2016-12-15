@@ -12,5 +12,5 @@ Data science project code and presentation materials
 * 06 - 2016 D.C. Michelin Restaurants Prediction (web scraping, API, boosting, SVM, neural network)
 * 07 - Expedia User Behavior Prediction (big data, AWS, random forest imputer, xgboost, neural network)
 * 08 - Modeling Home Depot Product Search Relevance (natural language processing, PCA, BayesianRidge)
-* 09 - Statistical Analysis of TV and Children's IQ Development (SAS project, Instrumental variable, heteroskedasticity, FGLS)
+* 09 - Statistical Analysis of Relationship between TV and Children's IQ Development (SAS project, Instrumental variable, heteroskedasticity, FGLS)
 * 10 - Sentiment Analysis and Clustering of Comcast Customer Complaints (Sentiment Analysis, Unsupervised Machine Learning, Xgboost)

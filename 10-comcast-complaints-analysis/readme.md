@@ -1,5 +1,8 @@
 # Sentiment Analysis and Clustering of Comcast Customer Complaints
 
+![](./cloud.png)
+- word cloud from FCC complaints
+
 ### Overview
 
 
